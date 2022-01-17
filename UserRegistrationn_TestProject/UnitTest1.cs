@@ -5,43 +5,42 @@ namespace UserRegistrationn_TestProject
 {
     [TestClass]
     public class UnitTest1
-    {
-        //Arrange
+    {   //Arrange
         //Act
-        //Asser
+        //Assert
         [TestMethod]
-        public void TestFirstNameReturnsTrue()
+        public void GivenFirstName_WhenCheck_ShouldReturnTrue()
         {
-            RegexPattern firstname = new RegexPattern();
-            bool result = firstname.ValidateFirstName("Akshay");
+            RegexPattern name = new RegexPattern();
+            bool result = name.ValidateName("Akshay", RegexPattern.FIRSTNAME_REGEX);
             Assert.IsTrue(result);
         }
         [TestMethod]
-        public void TestLastNameReturnsTrue()
+        public void GivenLastName_WhenCheck_ShouldReturnTrue()
         {
             RegexPattern lastname = new RegexPattern();
-            bool resultlastname = lastname.ValidateLastName("Kokitkar");
+            bool resultlastname = lastname.ValidateLastName("Kokitkar", RegexPattern.LASTNAME_REGEX);
             Assert.IsTrue(resultlastname);
         }
         [TestMethod]
-        public void TestPhoneNumberReturnsTrue()
+        public void GivenPhoneNum_WhenCheck_ShouldReturnTrue()
         {
             RegexPattern phonenum = new RegexPattern();
-            bool resultphonenum = phonenum.ValidatePhoneNum("91 1234567890");
+            bool resultphonenum = phonenum.ValidatePhoneNum("91 1234567890", RegexPattern.PHONENUMBER_REGEX);
             Assert.IsTrue(resultphonenum);
         }
         [TestMethod]
-        public void TestEmailIdReturnsTrue()
+        public void GivenEmailId_WhenCheck_ShouldReturnTrue()
         {
             RegexPattern emailid = new RegexPattern();
-            bool resultemailid = emailid.ValidateEmail("akokitkar3@gmail.com");
+            bool resultemailid = emailid.ValidateEmail("akokitkar3@gmail.com", RegexPattern.EMAIL_REGEX);
             Assert.IsTrue(resultemailid);
         }
         [TestMethod]
-        public void TestPasswordReturnsTrue()
+        public void TGivenPassword_WhenCheck_ShouldReturnTrue()
         {
             RegexPattern pass = new RegexPattern();
-            bool resultpass = pass.ValidatePassword("asdf123@Aktest");
+            bool resultpass = pass.ValidatePassword("234ak@asdf123", RegexPattern.PASSWORD_REGEX);
             Assert.IsTrue(resultpass);
         }
     }
